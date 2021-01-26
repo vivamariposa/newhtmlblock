@@ -66,7 +66,7 @@
   background: #0056ec;
 }
 
-.menu__item:after {
+.menu__item::after {
   position: absolute;
   left: 0;
   display: block;
@@ -77,11 +77,12 @@
   opacity: 0;
   transition: opacity 0.5s, width 0.5s;
 }
+
 .menu__item:last-child {
   margin-right: 0;
 }
 
-.menu__item_active:after {
+.menu__item_active::after {
   position: absolute;
   display: block;
   content: "";
