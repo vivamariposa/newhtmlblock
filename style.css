@@ -52,19 +52,7 @@
   transition: opacity 0.5s;
 }
 
-.menu__item::after {
-  position: absolute;
-  left: 0;
-  display: block;
-  content: "";
-  width: 0;
-  height: 3px;
-  background: #0056ec;
-  opacity: 0;
-  transition: opacity 0.5s, width 0.5s;
-}
-
-.menu__item::hover {
+.menu__item:hover {
   opacity: 0.5;
 }
 
@@ -78,11 +66,22 @@
   background: #0056ec;
 }
 
+.menu__item:after {
+  position: absolute;
+  left: 0;
+  display: block;
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #0056ec;
+  opacity: 0;
+  transition: opacity 0.5s, width 0.5s;
+}
 .menu__item:last-child {
   margin-right: 0;
 }
 
-.menu__item_active::after {
+.menu__item_active:after {
   position: absolute;
   display: block;
   content: "";
@@ -100,7 +99,7 @@
 }
 
 .menu__item:hover::after,
-.menu__item_active::after {
+.menu__item_active:after {
   opacity: 1;
   width: 100%;
 }
